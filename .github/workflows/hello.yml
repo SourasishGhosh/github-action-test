@@ -1,0 +1,16 @@
+name: Hello Action with Email Step  # Name shown in GitHub UI
+
+on: [push]  # Triggers on every code push to any branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Free GitHub "kitchen" (Linux machine)
+    steps:
+    - name: Checkout code  # Grabs your repo files
+      uses: actions/checkout@v4  # Reusable GitHub action
+
+    - name: 23f3004075@ds.study.iitm.ac.in  # Your required step!
+      run: echo "Hello from my GitHub Action!"
+
+    - name: List files  # Bonus: Shows it works
+      run: ls -la
